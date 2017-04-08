@@ -10,7 +10,7 @@ import java.io.IOException;
  * @date 2017/4/6
  * @link https://github.com/wuhulala
  */
-public class Bootstrap {
+public class Provider1 {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
                 new String[]{"provider.xml"});

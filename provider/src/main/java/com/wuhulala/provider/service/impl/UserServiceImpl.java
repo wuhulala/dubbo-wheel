@@ -13,8 +13,10 @@ import java.util.List;
  * @link https://github.com/wuhulala
  */
 public class UserServiceImpl implements UserService {
+    private int count = 0;
+
     public User getUser(String username) {
-        System.out.println("-----调用服务-----【"+username+"】");
+        System.out.println(++count+"-----调用服务-----【"+username+"】");
         return new User(username,"370031044@qq.com","1585818533");
     }
 

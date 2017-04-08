@@ -9,6 +9,7 @@
         <module>api</module>
         <module>provider</module>
         <module>consumer</module>
+        <module>consumerclient</module>
     </modules>
     <name>dubbo-wheel Maven Webapp</name>
     <url>http://maven.apache.org</url>
