@@ -7,10 +7,15 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://code.alibabatech.com/schema/dubbo
         http://code.alibabatech.com/schema/dubbo/dubbo.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+    <context:component-scan base-package="com.wuhulala.consumerclient.service.impl"/>
     <!-- 消费方应用名，用于计算依赖关系，不是匹配条件，不要与提供方一样 -->
     <dubbo:application name="consumer1"/>
     <!-- 使用multicast广播注册中心暴露发现服务地址 -->
     <dubbo:registry protocol="zookeeper" address="zookeeper://127.0.0.1:2181"/>
     <!-- 生成远程服务代理，可以和本地bean一样使用demoService -->
-    <dubbo:reference id="testService" interface="com.wuhulala.api.service.UserService"/>
+    <dubbo:reference check="false" id="testService" interface="com.wuhulala.api.service.UserService"/>
+    <!-- 用dubbo协议在29020端口暴露服务 -->
+    <dubbo:protocol name="dubbo" port="29020" />
+    <!-- 声明需要暴露的服务接口 -->
+    <dubbo:service interface="com.wuhulala.api.service.DemoService" ref="demoService" />
 </beans>
