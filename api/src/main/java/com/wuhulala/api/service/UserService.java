@@ -2,6 +2,8 @@ package com.wuhulala.api.service;
 
 import com.wuhulala.api.model.User;
 
+import java.util.List;
+
 /**
  * @author xueaohui
  * @version 1.0
@@ -10,4 +12,5 @@ import com.wuhulala.api.model.User;
  */
 public interface UserService {
     User getUser(String username);
+    public List<User> getUserList();
 }

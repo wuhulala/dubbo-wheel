@@ -1,0 +1,43 @@
+<script type="text/javascript">
+	csrfToken = "$!{csrf_token}";
+	currUrl = "$!{url}";
+	appServer = "$!{appServer}";
+	
+	//加载css
+	function loadCss(path){
+		if(!path || path.length === 0){
+			throw new Error('argument "path" is required !');
+		}
+		var head = document.getElementsByTagName('head')[0];
+        var link = document.createElement('link');
+        link.href = path;
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        head.appendChild(link);
+	}
+	//按顺序加载js
+	function loadJS(url, success) {
+        var domScript = document.createElement('script');
+        domScript.src = url;
+        success = success || function(){};
+        domScript.onload = domScript.onreadystatechange = function() {
+            if (!this.readyState || 'loaded' === this.readyState || 'complete' === this.readyState) {
+                success();
+                this.onload = this.onreadystatechange = null;
+                this.parentNode.removeChild(this);
+            }
+        }
+        document.getElementsByTagName('head')[0].appendChild(domScript);
+    }
+	var jQuery = jQuery || null;
+	if(!jQuery){
+		loadJS("$appServer.get('/scripts/jquery-1.4.2.min.js')", function(){
+			loadJS("$appServer.get('scripts/alert/alert.js')");
+		});
+		loadCss("$appServer.get('styles/basic.css')");
+		loadCss("$appServer.get('styles/admin.css')");
+	}else{
+		loadJS("$appServer.get('scripts/alert/alert.js')");
+	}
+</script>
+$screen_content

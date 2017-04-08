@@ -87,6 +87,16 @@
             <groupId>org.codehaus.jackson</groupId>
             <artifactId>jackson-mapper-asl</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity</artifactId>
+            <version>1.6.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity-tools</artifactId>
+            <version>1.4</version>
+        </dependency>
     </dependencies>
     <build>
         <finalName>consumer</finalName>
