@@ -21,5 +21,45 @@
         #end
     </tbody>
 </table>
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>序号</th>
+        <th>用户名</th>
+        <th>电话</th>
+        <th>邮箱</th>
+    </tr>
+    </thead>
+    <tbody>
+        #foreach($user in $users)
+        <tr>
+            <td>$!{velocityCount}</td>
+            <td>$!{user.username}</td>
+            <td>$!{user.phone}</td>
+            <td>$!{user.email}</td>
+        </tr>
+        #end
+    </tbody>
+</table>
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>序号</th>
+        <th>用户名</th>
+        <th>电话</th>
+        <th>邮箱</th>
+    </tr>
+    </thead>
+    <tbody>
+        #foreach($user in $users)
+        <tr>
+            <td>$!{velocityCount}</td>
+            <td>$!{user.username}</td>
+            <td>$!{user.phone}</td>
+            <td>$!{user.email}</td>
+        </tr>
+        #end
+    </tbody>
+</table>
 #parse('layout/common-js.vm')
 

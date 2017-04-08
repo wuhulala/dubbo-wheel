@@ -1,0 +1,77 @@
+body {
+    font-family: 'Microsoft YaHei';
+}
+
+/**===================================navbar===============================*/
+.navbar-default {
+    background-color: #75ac45;
+    color: white;
+    border: 0;
+    border-radius: 0;
+}
+
+.navbar-default .navbar-brand {
+    color: whitesmoke;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: whitesmoke;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
+    background-color: #75ac45
+}
+
+.dropdown-menu {
+    background-color: rgba(34, 185, 237, 0.59);
+}
+
+.dropdown-menu > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: antiquewhite;
+    white-space: nowrap;
+    background-color: rgba(34, 185, 237, 0.59);
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+    color: #000;
+    background-color: white;
+}
+
+/* 布局  */
+#content {
+
+}
+
+#footer {
+    position: fixed;
+    width: 100%;
+    height: 20px;
+    background-color: #75ac45;
+    bottom: 0;
+    color: white;
+    text-align: center
+}
+
+.main {
+    width: calc(100% - 220px);
+    float: right;
+    overflow: auto;
+    height: calc(100% - 100px);
+    padding: 10px;
+}
+
+.sidebar {
+    background-color: #75ac45;
+    color: white;
+    width: 200px;
+    float: left;
+    height: calc(100% - 95px);
+}
+
+
+

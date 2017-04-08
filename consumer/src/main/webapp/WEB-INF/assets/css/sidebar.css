@@ -1,0 +1,31 @@
+
+.first-menu,.first-menu:hover,.first-menu:focus{
+    background: #88ac76;
+    color:white;
+}
+.first-menu > span {
+    color:white;
+}
+
+.first-menu.active{
+    color:  white;
+    background: #88ac76;
+    border-right: 3px seagreen solid;
+}
+
+.second-menu{
+    font-size: 13px;
+}
+.second-menu>li{
+    text-align: center;
+    color:white;
+}
+.second-menu>li>a{
+    text-align: center;
+    color:white;
+}
+.second-menu>li:hover>a,.second-menu>li.active>a{
+    color: #6eac40;
+    border-right: 3px seagreen solid;
+    background-color: honeydew;
+}

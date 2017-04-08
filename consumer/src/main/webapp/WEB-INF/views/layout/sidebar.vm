@@ -1,0 +1,29 @@
+<ul id="main-nav" class="nav nav-tab nav-stacked">
+    <li>
+        <a href="#systemSetting" class="nav-header first-menu active">
+            个人中心
+        </a>
+        <ul id="systemSetting" class=" nav nav-list  second-menu">
+            <li class="active"><a href="#" id="">m1</a></li>
+            <li><a href="#" id="">m2</a></li>
+            <li><a href="#" id="">m3</a></li>
+            <li><a href="#" id="">m4</a></li>
+            <li><a href="#" id="">m5</a></li>
+            <li><a href="#" id="">m6</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#zujian" class="nav-header  first-menu">
+            工作中心
+        </a>
+        <ul id="zujian" class="nav nav-list second-menu" aria-expanded="true">
+            <li><a href="#" id="">m1</a></li>
+            <li><a href="#" id="">m2</a></li>
+            <li><a href="#" id="">m3</a></li>
+            <li><a href="#" id="">m4</a></li>
+            <li><a href="#" id="">m5</a></li>
+            <li><a href="#" id="">m6</a></li>
+        </ul>
+    </li>
+
+</ul>
