@@ -10,6 +10,7 @@
         <module>provider</module>
         <module>consumer</module>
         <module>consumerclient</module>
+        <module>provideronly</module>
     </modules>
     <name>dubbo-wheel Maven Webapp</name>
     <url>http://maven.apache.org</url>

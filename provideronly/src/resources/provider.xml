@@ -7,14 +7,16 @@
         http://code.alibabatech.com/schema/dubbo
         http://code.alibabatech.com/schema/dubbo/dubbo.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
     <!-- 具体的实现bean -->
-    <bean id="testService" class="com.wuhulala.provider.service.impl.UserServiceImpl" />
+    <bean id="testService" class="com.wuhulala.provideronly.service.impl.UserServiceImpl" />
 
     <!-- 提供方应用信息，用于计算依赖关系 -->
     <dubbo:application name="provider"  />
     <!-- 使用zookeeper注册中心暴露服务地址 -->
     <dubbo:registry address="zookeeper://127.0.0.1:2181" />
-    <!-- 用dubbo协议在20880端口暴露服务 -->
-    <dubbo:protocol name="dubbo" port="29016" />
+    <!-- 用dubbo协议在29014端口暴露服务 -->
+    <dubbo:protocol name="dubbo" port="29014" />
     <!-- 声明需要暴露的服务接口 -->
     <dubbo:service interface="com.wuhulala.api.service.UserService" ref="testService" />
+    <!--设置引用 初始化不检查如果有在初始化的时候引用了这个bean  那么就要考虑把这个耦合给干掉了 重新设计一下方法 就像在spring之中也不要搞这些循环依赖 很容易出错-->
+    <dubbo:reference check="false" interface="com.wuhulala.api.service.DemoService" id="demoService"/>
 </beans>

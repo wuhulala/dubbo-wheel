@@ -12,4 +12,7 @@
     <artifactId>api</artifactId>
     <description>发布服务与基本类</description>
 
+    <build>
+        <finalName>api</finalName>
+    </build>
 </project>

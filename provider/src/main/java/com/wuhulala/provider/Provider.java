@@ -10,10 +10,10 @@ import java.io.IOException;
  * @date 2017/4/6
  * @link https://github.com/wuhulala
  */
-public class Provider2 {
+public class Provider {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
-                new String[]{"provider2.xml"});
+                new String[]{"provider.xml"});
         context.start();
         System.out.println("提供者服务已注册成功");
         try {

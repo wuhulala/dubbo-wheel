@@ -1,4 +1,4 @@
-package com.wuhulala.provider;
+package com.wuhulala.provideronly;
 
 import com.wuhulala.api.service.DemoService;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
