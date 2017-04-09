@@ -10,7 +10,7 @@ import java.util.List;
  * @date 2017/4/6
  * @link https://github.com/wuhulala
  */
-public interface UserService {
+public interface UserService extends CURDService<User>{
     User getUser(String username);
     public List<User> getUserList();
 }

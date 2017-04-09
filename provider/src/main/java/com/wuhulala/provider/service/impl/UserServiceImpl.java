@@ -32,4 +32,24 @@ public class UserServiceImpl implements UserService {
         }
         return users;
     }
+
+    @Override
+    public User get(User user) {
+        return new User("test","370031044@qq.com","15858185333");
+    }
+
+    @Override
+    public void update(User user) {
+
+    }
+
+    @Override
+    public void del(User user) {
+
+    }
+
+    @Override
+    public List<User> query(User user) {
+        return null;
+    }
 }

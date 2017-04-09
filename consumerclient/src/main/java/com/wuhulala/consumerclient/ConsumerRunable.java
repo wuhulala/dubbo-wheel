@@ -13,16 +13,24 @@ import org.slf4j.LoggerFactory;
 public class ConsumerRunable implements Runnable{
     public static final Logger logger = LoggerFactory.getLogger(ConsumerRunable.class);
 
-    public UserService userService;
+    private UserService userService;
+
+    private int count;
 
     public ConsumerRunable(UserService userService){
         this.userService = userService;
+        this.count = 1000;
+    }
+
+    public ConsumerRunable(UserService userService,int count){
+        this.userService = userService;
+        this.count = count;
     }
     @Override
     public void run() {
         long start = System.currentTimeMillis();
         logger.debug(Thread.currentThread().getName()+"---------------------"+start+"ms");
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < count; i++) {
             userService.getUser("wuhulala");
         }
         long end = System.currentTimeMillis();
